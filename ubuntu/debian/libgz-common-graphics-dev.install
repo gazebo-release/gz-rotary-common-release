@@ -1,0 +1,5 @@
+usr/include/*/common*/*/common/graphics.hh
+usr/include/*/common*/*/common/graphics/*
+usr/lib/*/cmake/*-common-graphics/*
+usr/lib/*/lib*-common-graphics.so
+usr/lib/*/pkgconfig/*-common-graphics.pc

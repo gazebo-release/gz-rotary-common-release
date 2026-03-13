@@ -1,0 +1,5 @@
+usr/include/*/common*/*/common/av.hh
+usr/include/*/common*/*/common/av/*
+usr/lib/*/cmake/*-common-av/*
+usr/lib/*/lib*-common-av.so
+usr/lib/*/pkgconfig/*-common-av.pc

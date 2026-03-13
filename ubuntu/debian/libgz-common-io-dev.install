@@ -1,0 +1,5 @@
+usr/include/*/common*/*/common/io.hh
+usr/include/*/common*/*/common/io/*
+usr/lib/*/cmake/*-common-io/*
+usr/lib/*/lib*-common-io.so
+usr/lib/*/pkgconfig/*-common-io.pc

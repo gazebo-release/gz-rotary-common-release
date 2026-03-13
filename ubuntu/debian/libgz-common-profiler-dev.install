@@ -1,0 +1,6 @@
+usr/include/*/common*/*/common/profiler/*
+usr/lib/*/cmake/*-common-profiler/*
+usr/lib/*/lib*-common-profiler.so
+usr/lib/*/pkgconfig/*-common-profiler.pc
+usr/libexec/*/*-common/*
+usr/share/gz/*-common/profiler_vis/*

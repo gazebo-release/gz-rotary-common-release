@@ -1,0 +1,439 @@
+Source: gz-common
+Maintainer: Jose Luis Rivero <jrivero@honurobotics.com>
+Section: science
+Priority: optional
+Build-Depends: cmake,
+               pkg-config,
+               debhelper (>= 13),
+               doxygen,
+               libassimp-dev,
+               libfreeimage-dev,
+               libgdal-dev,
+               libgz-cmake-dev,
+               libgz-math-dev,
+               libgz-utils-dev,
+               libgz-utils-log-dev,
+               libtinyxml2-dev,
+               uuid-dev,
+               libavdevice-dev,
+               libavformat-dev,
+               libavcodec-dev,
+               libswscale-dev,
+               libavutil-dev,
+               libspdlog-dev
+Vcs-Browser: https://github.com/gazebosim/gz-common
+Vcs-Git: https://github.com/gazebo-release/gz-rotary-common-release
+Standards-Version: 4.5.1
+Homepage: http://gazebosim.org/
+
+Package: libgz-common
+Architecture: any
+Section: libs
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Provides: libgz-common-generic
+Conflicts: libgz-common-generic, libgz-common4, libgz-common5, libgz-common6, libgz-common7
+Replaces: libgz-common4, libgz-common5, libgz-common6, libgz-common7
+Multi-Arch: same
+Description: Collection of useful code used by robotics apps - Shared library
+ Gazebo common is a component in the Gazebo framework, a set of
+ libraries designed to rapidly develop robot applications. A collection of
+ useful classes and functions for handling many command tasks. This includes
+ parsing 3D mesh files, managing console output, and using PID controllers.
+ .
+ This package gathers the shared library
+
+Package: libgz-common-core-dev
+Architecture: any
+Section: libdevel
+Depends: libgz-cmake-dev,
+         libgz-utils-dev,
+         libgz-utils-log-dev,
+         uuid-dev,
+         libspdlog-dev,
+         libgz-common (= ${binary:Version}),
+         ${misc:Depends}
+Provides: libgz-common-core-dev-generic
+Conflicts: libgz-common-core-dev-generic, libgz-common4-core-dev, libgz-common5-core-dev, libgz-common6-core-dev, libgz-common7-core-dev
+Replaces: libgz-common4-core-dev, libgz-common5-core-dev, libgz-common6-core-dev, libgz-common7-core-dev
+Multi-Arch: same
+Description: Collection of useful code used by robotics apps - Core dev files
+ Gazebo common is a component in the Gazebo framework, a set of
+ libraries designed to rapidly develop robot applications. A collection of
+ useful classes and functions for handling many command tasks. This includes
+ parsing 3D mesh files, managing console output, and using PID controllers.
+ .
+ Core development files
+
+Package: libgz-common-dev
+Architecture: any
+Section: libdevel
+Depends: libgz-common-core-dev (= ${binary:Version}),
+         libgz-common-av-dev (= ${binary:Version}),
+         libgz-common-events-dev (= ${binary:Version}),
+         libgz-common-geospatial-dev (= ${binary:Version}),
+         libgz-common-graphics-dev (= ${binary:Version}),
+         libgz-common-io-dev (= ${binary:Version}),
+         libgz-common-profiler-dev (= ${binary:Version}),
+         libgz-common-testing-dev (= ${binary:Version}),
+         ${misc:Depends}
+Provides: libgz-common-dev-generic
+Conflicts: libgz-common-dev-generic, libgz-common4-dev, libgz-common5-dev, libgz-common6-dev, libgz-common7-dev
+Replaces: libgz-common4-dev, libgz-common5-dev, libgz-common6-dev, libgz-common7-dev
+Multi-Arch: same
+Description: Collection of useful code used by robotics apps - Metapackage
+ Gazebo common is a component in the Gazebo framework, a set of
+ libraries designed to rapidly develop robot applications. A collection of
+ useful classes and functions for handling many command tasks. This includes
+ parsing 3D mesh files, managing console output, and using PID controllers.
+ .
+ Metapackage for development.
+
+Package: libgz-common-av
+Architecture: any
+Section: libs
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Provides: libgz-common-av-generic
+Conflicts: libgz-common-av-generic, libgz-common4-av, libgz-common5-av, libgz-common6-av, libgz-common7-av
+Replaces: libgz-common4-av, libgz-common5-av, libgz-common6-av, libgz-common7-av
+Multi-Arch: same
+Description: Collection of useful code used by robotics apps - AV libraries
+ Gazebo common is a component in the Gazebo framework, a set of
+ libraries designed to rapidly develop robot applications. A collection of
+ useful classes and functions for handling many command tasks. This includes
+ parsing 3D mesh files, managing console output, and using PID controllers.
+ .
+ AV component of the library
+
+Package: libgz-common-av-dev
+Architecture: any
+Section: libdevel
+Depends: libgz-cmake-dev,
+         libgz-common-core-dev (= ${binary:Version}),
+         libgz-utils-dev,
+         libavdevice-dev,
+         libavformat-dev,
+         libavcodec-dev,
+         libswscale-dev,
+         libavutil-dev,
+         libgz-common-av (= ${binary:Version}),
+         ${misc:Depends}
+Provides: libgz-common-av-dev-generic
+Conflicts: libgz-common-av-dev-generic, libgz-common4-av-dev, libgz-common5-av-dev, libgz-common6-av-dev, libgz-common7-av-dev
+Replaces: libgz-common4-av-dev, libgz-common5-av-dev, libgz-common6-av-dev, libgz-common7-av-dev
+Multi-Arch: same
+Description: Collection of useful code used by robotics apps - AV libraries
+ Gazebo common is a component in the Gazebo framework, a set of
+ libraries designed to rapidly develop robot applications. A collection of
+ useful classes and functions for handling many command tasks. This includes
+ parsing 3D mesh files, managing console output, and using PID controllers.
+ .
+ AV component of the library, development files
+
+Package: libgz-common-events
+Architecture: any
+Section: libs
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Provides: libgz-common-events-generic
+Conflicts: libgz-common-events-generic, libgz-common4-events, libgz-common5-events, libgz-common6-events, libgz-common7-events
+Replaces: libgz-common4-events, libgz-common5-events, libgz-common6-events, libgz-common7-events
+Multi-Arch: same
+Description: Collection of useful code used by robotics apps - Events libraries
+ Gazebo common is a component in the Gazebo framework, a set of
+ libraries designed to rapidly develop robot applications. A collection of
+ useful classes and functions for handling many command tasks. This includes
+ parsing 3D mesh files, managing console output, and using PID controllers.
+ .
+ Events component of the library
+
+Package: libgz-common-events-dev
+Architecture: any
+Section: libdevel
+Depends: libgz-cmake-dev,
+         libgz-common-core-dev (= ${binary:Version}),
+         libgz-utils-dev,
+         libgz-math-dev,
+         libgz-common-events (= ${binary:Version}),
+         ${misc:Depends}
+Provides: libgz-common-events-dev-generic
+Conflicts: libgz-common-events-dev-generic, libgz-common4-events-dev, libgz-common5-events-dev, libgz-common6-events-dev, libgz-common7-events-dev
+Replaces: libgz-common4-events-dev, libgz-common5-events-dev, libgz-common6-events-dev, libgz-common7-events-dev
+Multi-Arch: same
+Description: Collection of useful code used by robotics apps - Events dev files
+ Gazebo common is a component in the Gazebo framework, a set of
+ libraries designed to rapidly develop robot applications. A collection of
+ useful classes and functions for handling many command tasks. This includes
+ parsing 3D mesh files, managing console output, and using PID controllers.
+ .
+ Events component development files
+
+Package: libgz-common-geospatial
+Architecture: any
+Section: libs
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Provides: libgz-common-geospatial-generic
+Conflicts: libgz-common-geospatial-generic, libgz-common4-geospatial, libgz-common5-geospatial, libgz-common6-geospatial, libgz-common7-geospatial
+Replaces: libgz-common4-geospatial, libgz-common5-geospatial, libgz-common6-geospatial, libgz-common7-geospatial
+Multi-Arch: same
+Description: Collection of useful code used by robotics apps - Geospatial libries
+ Gazebo common is a component in the Gazebo framework, a set of
+ libraries designed to rapidly develop robot applications. A collection of
+ useful classes and functions for handling many command tasks. This includes
+ parsing 3D mesh files, managing console output, and using PID controllers.
+ .
+ Geospatial component of the library
+
+Package: libgz-common-geospatial-dev
+Architecture: any
+Section: libdevel
+Depends: libgdal-dev,
+         libgz-cmake-dev,
+         libgz-common-graphics-dev (= ${binary:Version}),
+         libgz-math-dev,
+         libgz-utils-dev,
+         libgz-common-geospatial (= ${binary:Version}),
+         ${misc:Depends}
+Provides: libgz-common-geospatial-dev-generic
+Conflicts: libgz-common-geospatial-dev-generic, libgz-common4-geospatial-dev, libgz-common5-geospatial-dev, libgz-common6-geospatial-dev, libgz-common7-geospatial-dev
+Replaces: libgz-common4-geospatial-dev, libgz-common5-geospatial-dev, libgz-common6-geospatial-dev, libgz-common7-geospatial-dev
+Multi-Arch: same
+Description: Collection of useful code used by robotics apps - Geospatial dev files
+ Gazebo common is a component in the Gazebo framework, a set of
+ libraries designed to rapidly develop robot applications. A collection of
+ useful classes and functions for handling many command tasks. This includes
+ parsing 3D mesh files, managing console output, and using PID controllers.
+ .
+ Geospatial developement files
+
+Package: libgz-common-graphics
+Architecture: any
+Section: libs
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Provides: libgz-common-graphics-generic
+Conflicts: libgz-common-graphics-generic, libgz-common4-graphics, libgz-common5-graphics, libgz-common6-graphics, libgz-common7-graphics
+Replaces: libgz-common4-graphics, libgz-common5-graphics, libgz-common6-graphics, libgz-common7-graphics
+Multi-Arch: same
+Description: Collection of useful code used by robotics apps - Graphics libraries
+ Gazebo common is a component in the Gazebo framework, a set of
+ libraries designed to rapidly develop robot applications. A collection of
+ useful classes and functions for handling many command tasks. This includes
+ parsing 3D mesh files, managing console output, and using PID controllers.
+ .
+ Graphics component of the library
+
+Package: libgz-common-graphics-dev
+Architecture: any
+Section: libdevel
+Depends: libassimp-dev,
+         libgz-cmake-dev,
+         libgz-common-core-dev (= ${binary:Version}),
+         libgz-math-dev,
+         libgz-utils-dev,
+         libtinyxml2-dev,
+         libgz-common-graphics (= ${binary:Version}),
+         ${misc:Depends}
+Provides: libgz-common-graphics-dev-generic
+Conflicts: libgz-common-graphics-dev-generic, libgz-common4-graphics-dev, libgz-common5-graphics-dev, libgz-common6-graphics-dev, libgz-common7-graphics-dev
+Replaces: libgz-common4-graphics-dev, libgz-common5-graphics-dev, libgz-common6-graphics-dev, libgz-common7-graphics-dev
+Multi-Arch: same
+Description: Collection of useful code used by robotics apps - Graphics dev files
+ Gazebo common is a component in the Gazebo framework, a set of
+ libraries designed to rapidly develop robot applications. A collection of
+ useful classes and functions for handling many command tasks. This includes
+ parsing 3D mesh files, managing console output, and using PID controllers.
+ .
+ Graphics component development files
+
+Package: libgz-common-io
+Architecture: any
+Section: libs
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Provides: libgz-common-io-generic
+Conflicts: libgz-common-io-generic, libgz-common4-io, libgz-common5-io, libgz-common6-io, libgz-common7-io
+Replaces: libgz-common4-io, libgz-common5-io, libgz-common6-io, libgz-common7-io
+Multi-Arch: same
+Description: Collection of useful code used by robotics apps - I/O libraries
+ Gazebo common is a component in the Gazebo framework, a set of
+ libraries designed to rapidly develop robot applications. A collection of
+ useful classes and functions for handling many command tasks. This includes
+ parsing 3D mesh files, managing console output, and using PID controllers.
+ .
+ Graphics component of the library
+
+Package: libgz-common-io-dev
+Architecture: any
+Section: libdevel
+Depends: libgz-cmake-dev,
+         libgz-common-core-dev (= ${binary:Version}),
+         libgz-math-dev,
+         libgz-utils-dev,
+         libgz-common-io (= ${binary:Version}),
+         ${misc:Depends}
+Provides: libgz-common-io-dev-generic
+Conflicts: libgz-common-io-dev-generic, libgz-common4-io-dev, libgz-common5-io-dev, libgz-common6-io-dev, libgz-common7-io-dev
+Replaces: libgz-common4-io-dev, libgz-common5-io-dev, libgz-common6-io-dev, libgz-common7-io-dev
+Multi-Arch: same
+Description: Collection of useful code used by robotics apps - I/O dev files
+ Gazebo common is a component in the Gazebo framework, a set of
+ libraries designed to rapidly develop robot applications. A collection of
+ useful classes and functions for handling many command tasks. This includes
+ parsing 3D mesh files, managing console output, and using PID controllers.
+ .
+ Graphics component development files
+
+Package: libgz-common-profiler
+Architecture: any
+Section: libs
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Provides: libgz-common-profiler-generic
+Conflicts: libgz-common-profiler-generic, libgz-common4-profiler, libgz-common5-profiler, libgz-common6-profiler, libgz-common7-profiler
+Replaces: libgz-common4-profiler, libgz-common5-profiler, libgz-common6-profiler, libgz-common7-profiler
+Multi-Arch: same
+Description: Collection of useful code used by robotics apps - Profiler libs
+ Gazebo common is a component in the Gazebo framework, a set of
+ libraries designed to rapidly develop robot applications. A collection of
+ useful classes and functions for handling many command tasks. This includes
+ parsing 3D mesh files, managing console output, and using PID controllers.
+ .
+ Profiler component of the library
+
+Package: libgz-common-profiler-dev
+Architecture: any
+Section: libdevel
+Depends: libgz-cmake-dev,
+         libgz-common-core-dev (= ${binary:Version}),
+         libgz-common-profiler (= ${binary:Version}),
+         ${misc:Depends}
+Provides: libgz-common-profiler-dev-generic
+Conflicts: libgz-common-profiler-dev-generic, libgz-common4-profiler-dev, libgz-common5-profiler-dev, libgz-common6-profiler-dev, libgz-common7-profiler-dev
+Replaces: libgz-common4-profiler-dev, libgz-common5-profiler-dev, libgz-common6-profiler-dev, libgz-common7-profiler-dev
+Multi-Arch: same
+Description: Collection of useful code used by robotics apps - Profiler dev file
+ Gazebo common is a component in the Gazebo framework, a set of
+ libraries designed to rapidly develop robot applications. A collection of
+ useful classes and functions for handling many command tasks. This includes
+ parsing 3D mesh files, managing console output, and using PID controllers.
+ .
+ Profiler development files
+
+Package: libgz-common-testing
+Architecture: any
+Section: libs
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Provides: libgz-common-testing-generic
+Conflicts: libgz-common-testing-generic, libgz-common4-testing, libgz-common5-testing, libgz-common6-testing, libgz-common7-testing
+Replaces: libgz-common4-testing, libgz-common5-testing, libgz-common6-testing, libgz-common7-testing
+Multi-Arch: same
+Description: Collection of useful code used by robotics apps - Testing libries
+ Gazebo common is a component in the Gazebo framework, a set of
+ libraries designed to rapidly develop robot applications. A collection of
+ useful classes and functions for handling many command tasks. This includes
+ parsing 3D mesh files, managing console output, and using PID controllers.
+ .
+ Testing component of the library
+
+Package: libgz-common-testing-dev
+Architecture: any
+Section: libdevel
+Depends: libgz-cmake-dev,
+         libgz-utils-dev,
+         libgz-common-testing (= ${binary:Version}),
+         ${misc:Depends}
+Provides: libgz-common-testing-dev-generic
+Conflicts: libgz-common-testing-dev-generic, libgz-common4-testing-dev, libgz-common5-testing-dev, libgz-common6-testing-dev, libgz-common7-testing-dev
+Replaces: libgz-common4-testing-dev, libgz-common5-testing-dev, libgz-common6-testing-dev, libgz-common7-testing-dev
+Multi-Arch: same
+Description: Collection of useful code used by robotics apps - Testing dev files
+ Gazebo common is a component in the Gazebo framework, a set of
+ libraries designed to rapidly develop robot applications. A collection of
+ useful classes and functions for handling many command tasks. This includes
+ parsing 3D mesh files, managing console output, and using PID controllers.
+ .
+ Testing developement files
+
+Package: libgz-rotary-common
+Depends: libgz-common (= ${binary:Version}), ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: metapackages
+Description: alias package
+ Provides a package for Rotary without exposing the version number.
+
+Package: libgz-rotary-common-dev
+Depends: libgz-common-dev (= ${binary:Version}), ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: metapackages
+Description: alias package
+ Provides a package for Rotary without exposing the version number.
+
+Package: libgz-rotary-common-core-dev
+Depends: libgz-common-core-dev (= ${binary:Version}), ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: metapackages
+Description: alias package
+ Provides a package for Rotary without exposing the version number.
+
+Package: libgz-rotary-common-av-dev
+Depends: libgz-common-av-dev (= ${binary:Version}), ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: metapackages
+Description: alias package
+ Provides a package for Rotary without exposing the version number.
+
+Package: libgz-rotary-common-events-dev
+Depends: libgz-common-events-dev (= ${binary:Version}), ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: metapackages
+Description: alias package
+ Provides a package for Rotary without exposing the version number.
+
+Package: libgz-rotary-common-geospatial-dev
+Depends: libgz-common-geospatial-dev (= ${binary:Version}), ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: metapackages
+Description: alias package
+ Provides a package for Rotary without exposing the version number.
+
+Package: libgz-rotary-common-graphics-dev
+Depends: libgz-common-graphics-dev (= ${binary:Version}), ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: metapackages
+Description: alias package
+ Provides a package for Rotary without exposing the version number.
+
+Package: libgz-rotary-common-io-dev
+Depends: libgz-common-io-dev (= ${binary:Version}), ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: metapackages
+Description: alias package
+ Provides a package for Rotary without exposing the version number.
+
+Package: libgz-rotary-common-profiler-dev
+Depends: libgz-common-profiler-dev (= ${binary:Version}), ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: metapackages
+Description: alias package
+ Provides a package for Rotary without exposing the version number.
+
+Package: libgz-rotary-common-testing-dev
+Depends: libgz-common-testing-dev (= ${binary:Version}), ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: metapackages
+Description: alias package
+ Provides a package for Rotary without exposing the version number.

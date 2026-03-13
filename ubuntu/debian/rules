@@ -1,0 +1,35 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	dh_auto_configure -- \
+	    -DCMAKE_BUILD_TYPE=RelWithDebInfo
+
+override_dh_install:
+	install -d debian/tmp/usr/share/gz/gz-common/
+	install ./obj-*/*.tag.xml debian/tmp/usr/share/gz/gz-common/
+	dh_install --
+	# need to remove files present in components
+	$(RM) debian/libgz-common-core-dev/usr/include/gz/common*/ignition/common/av.hh
+	$(RM) debian/libgz-common-core-dev/usr/include/gz/common*/ignition/common/events.hh
+	$(RM) debian/libgz-common-core-dev/usr/include/gz/common*/ignition/common/geospatial.hh
+	$(RM) debian/libgz-common-core-dev/usr/include/gz/common*/ignition/common/graphics.hh
+	$(RM) debian/libgz-common-core-dev/usr/include/gz/common*/ignition/common/io.hh
+	$(RM) debian/libgz-common-core-dev/usr/include/gz/common*/ignition/common/testing.hh
+	$(RM) debian/libgz-common-core-dev/usr/include/gz/common*/gz/common/av.hh
+	$(RM) debian/libgz-common-core-dev/usr/include/gz/common*/gz/common/events.hh
+	$(RM) debian/libgz-common-core-dev/usr/include/gz/common*/gz/common/geospatial.hh
+	$(RM) debian/libgz-common-core-dev/usr/include/gz/common*/gz/common/graphics.hh
+	$(RM) debian/libgz-common-core-dev/usr/include/gz/common*/gz/common/io.hh
+	$(RM) debian/libgz-common-core-dev/usr/include/gz/common*/gz/common/testing.hh
+
+# test cannot run in parallel
+override_dh_auto_test:
+	dh_auto_test --max-parallel=1
+
+# Execute doc creation to export at least the doxygen tag file
+override_dh_auto_build:
+	dh_auto_build -- doc
+	dh_auto_build

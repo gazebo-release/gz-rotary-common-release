@@ -1,0 +1,7 @@
+usr/include/*/common[0-99]/*/common.hh
+usr/include/*/common[0-99]/*/common/*.hh
+usr/include/*/common[0-99]/*/common/detail/*.hh
+usr/lib/*/lib*-common.so
+usr/lib/*/pkgconfig/*-common.pc
+usr/lib/*/cmake/*-common/*-common*
+usr/share/gz/*-common/*-common*.tag.xml

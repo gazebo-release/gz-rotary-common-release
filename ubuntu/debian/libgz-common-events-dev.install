@@ -1,0 +1,5 @@
+usr/include/*/common*/*/common/events.hh
+usr/include/*/common*/*/common/events/*
+usr/lib/*/cmake/*-common-events/*
+usr/lib/*/lib*-common-events.so
+usr/lib/*/pkgconfig/*-common-events.pc

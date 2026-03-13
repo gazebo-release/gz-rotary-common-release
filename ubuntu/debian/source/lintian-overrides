@@ -1,0 +1,3 @@
+# Lintian is marking this even though the file is in the repo, ignore it
+# Others lintian warnings related to Convert.js are left in as they are valid
+source-is-missing profiler/src/Remotery/vis/extern/BrowserLib/Core/Code/Convert.js

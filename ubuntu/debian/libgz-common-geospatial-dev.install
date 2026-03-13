@@ -1,0 +1,5 @@
+usr/include/*/common*/*/common/geospatial.hh
+usr/include/*/common*/*/common/geospatial/*
+usr/lib/*/cmake/*-common-geospatial/*
+usr/lib/*/lib*-common-geospatial.so
+usr/lib/*/pkgconfig/*-common-geospatial.pc

@@ -1,0 +1,31 @@
+#!/bin/sh
+# autopkgtest check: Build and run a program against gz-common, to verify that the
+# headers and pkg-config file are installed correctly
+# (C) 2012 Jose Luis Rivero
+# Author: Jose Luis Rivero <jrivero@osrfoundation.org>
+
+set -e
+
+WORKDIR=$(mktemp -d)
+trap "rm -rf $WORKDIR" 0 INT QUIT ABRT PIPE TERM
+cd $WORKDIR
+cat <<EOF > gztest.c
+
+#include <iostream>
+#include <gz/common/Base64.hh>
+
+int main(int argc, char **argv)
+{
+    std::string str = "123abc";
+    std::string result;
+    gz::common::Base64::Encode(str.c_str(), str.size(), result);
+
+    return 0;
+}
+EOF
+
+g++ -o gztest gztest.c `pkg-config --cflags --libs gz-common`
+echo "build: OK"
+[ -x gztest ]
+./gztest
+echo "run: OK"

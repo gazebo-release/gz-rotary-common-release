@@ -1,0 +1,5 @@
+usr/include/*/common*/*/common/testing.hh
+usr/include/*/common*/*/common/testing/*
+usr/lib/*/cmake/*-common-testing/*
+usr/lib/*/lib*-common-testing.so
+usr/lib/*/pkgconfig/*-common-testing.pc
