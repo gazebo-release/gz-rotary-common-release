@@ -358,15 +358,7 @@ Description: Collection of useful code used by robotics apps - Testing dev files
  .
  Testing developement files
 
-Package: gz-rotary-common
-Depends: libgz-common (= ${binary:Version}), ${misc:Depends}
-Architecture: all
-Priority: optional
-Section: metapackages
-Description: alias package
- Provides a package for Rotary without exposing the version number.
-
-Package: gz-rotary-common-dev
+Package: libgz-rotary-common-dev
 Depends: libgz-common-dev (= ${binary:Version}), ${misc:Depends}
 Architecture: all
 Priority: optional
@@ -374,7 +366,7 @@ Section: metapackages
 Description: alias package
  Provides a package for Rotary without exposing the version number.
 
-Package: gz-rotary-common-core-dev
+Package: libgz-rotary-common-core-dev
 Depends: libgz-common-core-dev (= ${binary:Version}), ${misc:Depends}
 Architecture: all
 Priority: optional
@@ -382,7 +374,7 @@ Section: metapackages
 Description: alias package
  Provides a package for Rotary without exposing the version number.
 
-Package: gz-rotary-common-av-dev
+Package: libgz-rotary-common-av-dev
 Depends: libgz-common-av-dev (= ${binary:Version}), ${misc:Depends}
 Architecture: all
 Priority: optional
@@ -390,7 +382,7 @@ Section: metapackages
 Description: alias package
  Provides a package for Rotary without exposing the version number.
 
-Package: gz-rotary-common-events-dev
+Package: libgz-rotary-common-events-dev
 Depends: libgz-common-events-dev (= ${binary:Version}), ${misc:Depends}
 Architecture: all
 Priority: optional
@@ -398,7 +390,7 @@ Section: metapackages
 Description: alias package
  Provides a package for Rotary without exposing the version number.
 
-Package: gz-rotary-common-geospatial-dev
+Package: libgz-rotary-common-geospatial-dev
 Depends: libgz-common-geospatial-dev (= ${binary:Version}), ${misc:Depends}
 Architecture: all
 Priority: optional
@@ -406,7 +398,7 @@ Section: metapackages
 Description: alias package
  Provides a package for Rotary without exposing the version number.
 
-Package: gz-rotary-common-graphics-dev
+Package: libgz-rotary-common-graphics-dev
 Depends: libgz-common-graphics-dev (= ${binary:Version}), ${misc:Depends}
 Architecture: all
 Priority: optional
@@ -414,7 +406,7 @@ Section: metapackages
 Description: alias package
  Provides a package for Rotary without exposing the version number.
 
-Package: gz-rotary-common-io-dev
+Package: libgz-rotary-common-io-dev
 Depends: libgz-common-io-dev (= ${binary:Version}), ${misc:Depends}
 Architecture: all
 Priority: optional
@@ -422,7 +414,7 @@ Section: metapackages
 Description: alias package
  Provides a package for Rotary without exposing the version number.
 
-Package: gz-rotary-common-profiler-dev
+Package: libgz-rotary-common-profiler-dev
 Depends: libgz-common-profiler-dev (= ${binary:Version}), ${misc:Depends}
 Architecture: all
 Priority: optional
@@ -430,7 +422,7 @@ Section: metapackages
 Description: alias package
  Provides a package for Rotary without exposing the version number.
 
-Package: gz-rotary-common-testing-dev
+Package: libgz-rotary-common-testing-dev
 Depends: libgz-common-testing-dev (= ${binary:Version}), ${misc:Depends}
 Architecture: all
 Priority: optional
